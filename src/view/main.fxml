@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="566.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.mainController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints maxHeight="166.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="441.0" minHeight="10.0" prefHeight="441.0" vgrow="SOMETIMES" />
+    <RowConstraints maxHeight="92.0" minHeight="0.0" prefHeight="0.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+   <children>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="onPitch" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="onpitchName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="onpitchTeam" prefWidth="150.0" text="MLS Team" />
+                  <TableColumn fx:id="onpitchNum" prefWidth="75.0" text="Jersey #" />
+                  <TableColumn fx:id="onpitchPos" prefWidth="124.0" text="Position" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0">
+         <children>
+            <Label text="On Pitch" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <Label text="On Bench" />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <children>
+            <TableView fx:id="onBench" prefHeight="200.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="onbenchName" prefWidth="150.0" text="Name" />
+                <TableColumn fx:id="onbenchTeam" prefWidth="150.0" text="MLS Team" />
+                  <TableColumn fx:id="onbenchNum" prefWidth="75.0" text="Jersey #" />
+                  <TableColumn fx:id="onbenchPos" prefWidth="124.0" text="Position" />
+              </columns>
+            </TableView>
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="addB" mnemonicParsing="false" onAction="#onAddB" text="===&gt; " />
+         </children>
+      </StackPane>
+      <StackPane prefHeight="150.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="2">
+         <children>
+            <Button fx:id="removeB" mnemonicParsing="false" onAction="#onRemoveB" text="&lt;===" />
+         </children>
+      </StackPane>
+   </children>
+</GridPane>
